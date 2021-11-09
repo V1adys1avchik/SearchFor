@@ -15,28 +15,25 @@ namespace Words
         //
         static void Main()
         {
+            string word = null;
+            string filePath = null; //  C:\Users\vladyslav.avramchuk\My.txt
+            bool check = false;
+            while (!check)
+            {
+                Console.WriteLine("Enter path for your .txt file: ");
+                filePath = Console.ReadLine();
+
+                if (File.Exists(filePath))
+                    check = true;
+                else
+                {
+                    Console.WriteLine("Wrong path. Try again...");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+            }
             while (true)
             {
-                string word = null;
-                string filePath = null; //  C:\Users\vladyslav.avramchuk\My.txt
-                bool check = false;
-                while (!check)
-                {
-                    Console.WriteLine("Enter path for your .txt file: ");
-                    filePath = Console.ReadLine();
-
-                    if(File.Exists(filePath))  
-                        check = true;
-                    else
-                    {
-                        Console.WriteLine("Wrong path. Try again...");
-                        Console.ReadLine();
-                        Console.Clear();
-                    }
-                }
-                
-
-
                 Console.WriteLine("Enter your word: ");
 
                 word = Console.ReadLine();
