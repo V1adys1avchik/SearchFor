@@ -32,18 +32,19 @@ namespace Words
                     Console.Clear();
                 }
             }
+            TxTWordFinder finder = new TxTWordFinder(filePath);
+            WordCounter wordCounter = new WordCounter(filePath);
+
             while (true)
             {
                 Console.WriteLine("Enter your word: ");
 
                 word = Console.ReadLine();
-                TxTWordFinder finder = new TxTWordFinder(filePath);
                 finder.Begin(word);
 
                 Console.ReadKey();
                 Console.WriteLine(new string('/', 50));
                 //test
-                WordCounter wordCounter = new WordCounter(filePath);
                 wordCounter.Begin();
                 Console.ReadKey();
                 Console.Clear();
