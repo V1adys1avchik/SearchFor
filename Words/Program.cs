@@ -16,7 +16,7 @@ namespace Words
         static void Main()
         {
             string word = null;
-            string filePath = null; //  C:\Users\vladyslav.avramchuk\My.txt
+            string filePath = null; 
             bool check = false;
             while (!check)
             {
