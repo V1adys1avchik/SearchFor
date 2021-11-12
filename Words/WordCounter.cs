@@ -21,9 +21,9 @@ namespace Words
         public void Begin()
         {
             var strs = File.ReadAllLines(filePath);
-            GetAmountOfWords(strs);
+            AmountOfWords(strs);
         }
-        private void GetAmountOfWords(string[] st)
+        private void AmountOfWords(string[] st)
         {
             //List<string> tempList = new List<string>();
             Dictionary<string, int> tempDictionary = new Dictionary<string, int>();
