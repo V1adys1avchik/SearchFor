@@ -37,7 +37,7 @@ namespace Words
         private IEnumerable<int> AllIndexesOf(string str, string value)
         {
             if (String.IsNullOrEmpty(value))
-                throw new ArgumentException("the string to find may not be empty");
+                throw new ArgumentException("the string value to find may not be empty");
             for (int index = 0; ; index += value.Length)
             {
                 index = str.IndexOf(value, index);
