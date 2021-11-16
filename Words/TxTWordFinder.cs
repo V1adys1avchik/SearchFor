@@ -10,6 +10,7 @@ namespace Words
 {
     class TxTWordFinder
     {
+        //
         private static string filePath = null;
 
         public TxTWordFinder(string path)

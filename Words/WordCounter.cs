@@ -9,6 +9,7 @@ namespace Words
 {
     class WordCounter
     {
+        //
         private static string filePath = null;
 
         public WordCounter(string path)
