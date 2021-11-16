@@ -22,8 +22,9 @@ namespace Words
             {
                 Console.WriteLine("Enter path for your .txt file: ");
                 filePath = Console.ReadLine();
+                FileSystemInfo fileInfo = new FileInfo(filePath);
 
-                if (File.Exists(filePath))
+                if (File.Exists(filePath) && fileInfo.Name.EndsWith(".txt"))
                     check = true;
                 else
                 {
@@ -42,6 +43,7 @@ namespace Words
                 word = Console.ReadLine();
                 finder.Begin(word);
 
+                Console.WriteLine("Press any key to see statistic");
                 Console.ReadKey();
                 Console.WriteLine(new string('/', 50));
                 //test

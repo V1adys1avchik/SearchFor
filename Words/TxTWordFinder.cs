@@ -27,9 +27,17 @@ namespace Words
                 counter++;
 
                 var indexes = AllIndexesOf(line, _word).ToList();
-                foreach (var index in indexes)
+                if (indexes.Count > 0)
                 {
-                    Console.WriteLine($"Word {_word} was found: line - {counter} | position - {index + 1}");   
+                    foreach (var index in indexes)
+                    {
+                        Console.WriteLine($"Word {_word} was found: line - {counter} | position - {index + 1}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Word {_word} wasn't found in line - {counter}");
+                    //break;
                 }
             }
         }
