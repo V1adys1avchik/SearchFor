@@ -22,9 +22,8 @@ namespace Words
             {
                 Console.WriteLine("Enter path for your .txt file: ");
                 filePath = Console.ReadLine();
-                FileSystemInfo fileInfo = new FileInfo(filePath);
 
-                if (File.Exists(filePath) && fileInfo.Name.EndsWith(".txt"))
+                if (File.Exists(filePath) && Path.GetExtension(filePath) == ".txt")
                     check = true;
                 else
                 {
